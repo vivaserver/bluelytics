@@ -1,0 +1,31 @@
+{
+  "name": "bluelytics",
+  "version": "0.0.1",
+  "description": "Client to the Bluelytics.com.ar API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Cristian R. Arroyo",
+    "email": "cristian.arroyo@vivaserver.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vivaserver/bluelytics.git"
+  },
+  "homepage": "https://github.com/vivaserver/bluelytics",
+  "keywords": [
+    "dolar",
+    "dolar blue",
+    "argentina",
+    "pesos",
+    "exchange",
+    "money",
+    "rate"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "restler": "^3.3.0"
+  }
+}
