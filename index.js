@@ -1,13 +1,21 @@
 const fetch = require("node-fetch");
 
-exports.legacy = function(callback) {
-  rest.get("http://api.bluelytics.com.ar/json/last_price").on("complete",function(result) {
-    if (result instanceof Error) {
-      throw(result.message);
-    }
-    else {
-      return callback(result);
-    }
+exports.legacy = (resolve, reject) => {
+  return new Promise((resolve, reject) => {
+    fetch("http://api.bluelytics.com.ar/json/last_price")
+    .then((resource) => {
+      if (resource.ok) {
+        return resource.json();
+      }
+      else throw(resource);
+    })
+    .then((result) => {
+      resolve(result);
+    })
+    .catch((err) => {
+      if (reject) reject(err);
+      console.error(err)
+    });
   });
 };
 
@@ -27,5 +35,5 @@ exports.latest = (resolve, reject) => {
       if (reject) reject(err);
       console.error(err)
     });
-  })
+  });
 };
