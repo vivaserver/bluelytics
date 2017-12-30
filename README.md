@@ -6,16 +6,16 @@ A very simple Node client for the [bluelytics API][blue]. Version 0.0.2 uses Pro
 
 ## Example
 
-    var bluelytics = require("bluelytics");
+    const bluelytics = require("bluelytics");
 
-    try {
-      bluelytics.latest(function(response) {
-        console.log(response);
-      });
-    }
-    catch (error) {
-      console.log("Error: "+error);
-    }
+    let console_log = (response) => console.log(response);
+    let console_err = (response) => console.err(response);
+
+    bluelytics.latest()
+    .then(
+      console_log,  // resolve
+      console_err   // reject
+    );
 
 ## License
 
@@ -23,4 +23,4 @@ MIT
 
 ## Copyright
 
-(c)2015 Cristian R. Arroyo
+(c)2017 Cristian R. Arroyo
