@@ -1,6 +1,6 @@
 {
   "name": "bluelytics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A very simple Node client for the bluelytics API",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "restler": "^3.3.0"
+    "node-fetch": "^1.7.3"
   }
 }

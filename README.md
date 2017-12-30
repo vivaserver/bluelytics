@@ -1,6 +1,6 @@
 # bluelytics
 
-A very simple Node client for the [bluelytics API][blue].
+A very simple Node client for the [bluelytics API][blue]. Version 0.0.2 uses Promises.
 
 [blue]: http://bluelytics.com.ar/#/api
 

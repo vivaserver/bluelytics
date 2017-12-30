@@ -1,10 +1,8 @@
 const bluelytics = require("../index.js");
 
-try {
-  bluelytics.latest(function(response) {
+bluelytics.latest()
+.then(
+  function(response) {  // resolve
     console.log(response);
-  });
-}
-catch (error) {
-  console.log("Error: "+error);
-}
+  }
+);
